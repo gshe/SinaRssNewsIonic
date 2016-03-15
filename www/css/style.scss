@@ -1,0 +1,36 @@
+/* Empty. Add your own CSS if you like */
+.news-detail {
+  height: 80px;
+}
+
+.menu {
+  .menuItem {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .menuText {
+    width: 100%;
+    color: #4cd964;
+    background-color: #cccccc;
+  }
+
+  i {
+    background: rgb(1, 1, 1);
+  }
+
+}
+
+.topic {
+  .title {
+    margin: 0;
+  }
+  .summary {
+    margin: 8px 0;
+  }
+  .avatar {
+    width: 16px;
+    border-radius: 8px;
+    vertical-align: middle;
+  }
+}

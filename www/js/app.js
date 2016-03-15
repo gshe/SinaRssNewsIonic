@@ -34,16 +34,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.config'])
       })
 
       .state('app.channel', {
-        url: '/channel/:channelname',
+        url: '/channel/:id',
         views: {
           'menuContent': {
             templateUrl: 'templates/channel.html',
             controller: 'ChannelCtrl'
           }
         }
+      })
+      .state('app.news', {
+        url: '/news/:id',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/news.html',
+            controller: 'NewsCtrl'
+          }
+        }
       });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/channel/all');
+    $urlRouterProvider.otherwise('/app/channel/1');
   });
 
 angular.module('starter.controllers', ['starter.services']);

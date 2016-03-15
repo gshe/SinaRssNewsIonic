@@ -1,0 +1,15 @@
+<ion-view view-title="新闻">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-share" ng-click="onShareNews()"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <ion-refresher pulling-text="下拉刷新..." on-refresh="onRefresh()">
+    </ion-refresher>
+    <div ng-repeat="img in news.images">
+      <img ng-src="{{img}}"/>
+    </div>
+    <div class="news-detail">
+      {{news.title}}
+    </div>
+  </ion-content>
+</ion-view>
