@@ -2,10 +2,17 @@
  * Created by admin on 16/3/15.
  */
 
-angular.module('starter.services', [])
-  .factory('RssManager', function ($log, ENV, Channels) {
+angular.module('starter.services')
+  .factory('RssManager', function ($log, $resource, ENV, Channels, x2js) {
+    var rssResource = $resource(ENV.domain + ENV.api + 'news/latest');
 
     return {
+      getRssChannels: function () {
+        return rssResource.get(function (response) {
+
+          }
+        );
+      },
       getAllChannels: function () {
         $log.debug(Channels);
         return Channels;
@@ -19,7 +26,7 @@ angular.module('starter.services', [])
           {id: 6, title: id + '--港澳台新闻'}
         ];
       },
-      getNewsById:function(newsId){
+      getNewsById: function (newsId) {
         return {
           images: [
             "http://pic4.zhimg.com/487425196168f358303ae5282c844da3.jpg"

@@ -8,6 +8,8 @@
     "angular-animate": "*",
     "angular-sanitize": "*",
     "angular-scenario": "*",
-    "angular-ui": "*"
+    "angular-ui": "*",
+    "x2js": "*",
+    "angular-xml": "*"
   }
 }

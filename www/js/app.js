@@ -50,11 +50,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.config'])
             controller: 'NewsCtrl'
           }
         }
-      });
+      })
+      .state('app.setting', {
+        url: '/setting',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/setting.html',
+            controller: 'SettingCtrl'
+          }
+        }
+      })
+    ;
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/channel/1');
   });
 
 angular.module('starter.controllers', ['starter.services']);
 
-angular.module('starter.services', ['ngResource', 'starter.config']);
+angular.module('starter.services', ['xml', 'ngResource', 'starter.config']);

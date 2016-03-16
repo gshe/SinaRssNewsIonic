@@ -12,4 +12,10 @@ angular.module('starter.controllers')
       $scope.channels = RssManager.getAllChannels();
       $log.debug($scope.channels);
     };
+
+    $scope.loadRssChannels = function(){
+      RssManager.getRssChannels().$promise.then(function(response){
+        console.log(response);
+      });
+    };
   });
